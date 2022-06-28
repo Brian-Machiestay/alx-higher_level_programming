@@ -14,6 +14,8 @@ int check_cycle(listint_t *list)
 	listint_t *listcopy = list;
 	int i;
 
+	if (list == NULL)
+		return (0);
 	for (i = 0; listcopy->next != NULL; i++)
 	{
 		if (listcopy->next == headaddr)
