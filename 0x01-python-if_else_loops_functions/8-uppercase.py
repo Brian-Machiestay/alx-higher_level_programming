@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def uppercase(str):
     low = list(range(97, 123))
     upper = list(range(65, 91))
