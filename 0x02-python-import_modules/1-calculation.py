@@ -3,7 +3,7 @@ import calculator_1 as calc
 
 a = 10
 b = 5
-print("{} + {} = {}".format(str(a), str(b), str(calc.add(a, b))))
-print("{} - {} = {}".format(str(a), str(b), str(calc.sub(a, b))))
-print("{} * {} = {}".format(str(a), str(b), str(calc.mul(a, b))))
-print("{} / {} = {}".format(str(a), str(b), str(calc.div(a, b))))
+print(a, "+", b, "=", calc.add(a, b))
+print(a, "-", b, "=", calc.sub(a, b))
+print(a, "*", b, "=", calc.mul(a, b))
+print(a, "/", b, "=", calc.div(a, b))
