@@ -9,4 +9,4 @@ def best_score(a_dictionary):
         if a_dictionary[key] > count:
             count = a_dictionary[key]
             keyf = key
-    return key
+    return keyf
