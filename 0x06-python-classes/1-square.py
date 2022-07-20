@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""defines and initializes the size attribute"""
+
+
 class Square:
+
     """Square defines a square"""
+
     def __init__(self, size=""):
         """initializes the the square.
 
@@ -8,4 +13,5 @@ class Square:
             size(int): the square size.
 
         """
-        self.__size = size
+
+        self._size = size
