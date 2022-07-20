@@ -49,7 +49,7 @@ class Square:
             print()
         else:
             if (thispos[1] != 0):
-                print(""*thispos[1])
+                print("\n"*thispos[1], end="")
             for i in range(0, thissize):
                 if (thispos[0] != 0):
                     print(" "*thispos[0], end="")
