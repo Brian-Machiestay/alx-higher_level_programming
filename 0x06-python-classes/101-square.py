@@ -56,7 +56,8 @@ class Square:
                     string = string + " "*thispos[0]
                 for j in range(0, thissize):
                     string = string + "#"
-                string = string + "\n"
+                if i != thissize - 1:
+                    string = string + "\n"
         return string
 
     def my_print(self):
