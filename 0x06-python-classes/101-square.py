@@ -41,7 +41,7 @@ class Square:
         """returns the position"""
         self.__init__(self.size, value)
 
-    def __str__(self):
+    def __repr__(self):
         """print uses this"""
         thissize = self.__size
         thispos = self.__position
