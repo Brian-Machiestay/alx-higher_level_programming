@@ -47,7 +47,7 @@ class Square:
         thispos = self.__position
         string = ""
         if thissize == 0:
-            string = "\n"
+            string = ""
         else:
             if (thispos[1] != 0):
                 string = string + "\n"*thispos[1]
