@@ -9,8 +9,10 @@ class Node:
         """instantiates a node object"""
 
         if type(data) is not int:
-            raise TypeError("data must be an integer")
-        if not(type(next_node) is not Node or type(next_node) is not None):
+            raise TypeError("data must be an integer\nnext_node \
+must be a Node object")
+
+        if not(isinstance(next_node, Node) or type(next_node) is not None):
             raise TypeError("next_node must be a Node object")
         self.__data = data
         self.__next_node = next_node
@@ -67,6 +69,8 @@ class SinglyLinkedList:
         """represents the string format of the list"""
         head = self.__head
         string = ""
+        if head is None:
+            return string
         while head.next_node is not None:
             string = string + str(head.data) + "\n"
             head = head.next_node
