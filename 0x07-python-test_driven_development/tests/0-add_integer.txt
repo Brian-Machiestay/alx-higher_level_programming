@@ -1,0 +1,27 @@
+""" this test file tests add_integer function"""
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(4, 3)
+7
+>>> add_integer(5, -3)
+2
+>>> add_integer(6, 5.9)
+11
+
+>>> add_integer(666666666666, 5555)
+666666672221
+
+>>> add_integer("a" + "b")
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(3, "b")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(5.4, 9.0)
+14
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
