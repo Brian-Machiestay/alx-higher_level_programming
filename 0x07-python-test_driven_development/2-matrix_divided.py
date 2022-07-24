@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """this module divides a
 a matrix and returns a new
 matrix
