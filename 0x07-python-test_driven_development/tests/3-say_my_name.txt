@@ -1,0 +1,22 @@
+"""this is doctest for say_my_name module"""
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Brian", "Machiestay")
+My name is Brian Machiestay
+
+>>> say_my_name(3, "Machiestay")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Brian", 3)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(3, 3)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+last_name must be a string
+
+>>> say_my_name("Bob")
+My name is Bob 
+

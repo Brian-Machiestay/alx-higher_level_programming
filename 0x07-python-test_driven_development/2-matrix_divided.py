@@ -6,6 +6,10 @@ matrix
 
 
 def matrix_divided(matrix, div):
+    """this module divides
+    the content of a list of lists
+    of integers
+    """
     new_Mat = []
     new_Mat_cont = []
     size = 0
