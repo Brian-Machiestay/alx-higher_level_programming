@@ -26,3 +26,11 @@
 >>> this = MyList()
 >>> this.print_sorted()
 []
+>>> this.append("for")
+>>> this.append("what")
+>>> this.print_sorted()
+['for', 'what']
+>>> this.append(7)
+>>> this.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'int' and 'str'
