@@ -1,0 +1,17 @@
+"""this tests tests my list"""
+
+>>> MyList = __import__('1-my_list').MyList
+>>> this = MyList()
+>>> this.append(5)
+>>> this.append(4)
+>>> this.append(3)
+>>> this.append(2)
+>>> this.append(1)
+>>> this.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> this.append(0)
+>>> this.append(-3)
+>>> this.append (-4)
+>>> this.print_sorted()
+[-4, -3, 0, 1, 2, 3, 4, 5]
