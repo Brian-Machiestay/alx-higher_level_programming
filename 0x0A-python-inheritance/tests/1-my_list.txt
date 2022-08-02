@@ -15,3 +15,14 @@
 >>> this.append (-4)
 >>> this.print_sorted()
 [-4, -3, 0, 1, 2, 3, 4, 5]
+>>> del(this)
+>>> this = MyList()
+>>> this.append(0)
+>>> this.append(0)
+>>> this.append(0)
+>>> this.print_sorted()
+[0, 0, 0]
+>>> del(this)
+>>> this = MyList()
+>>> this.print_sorted()
+[]
