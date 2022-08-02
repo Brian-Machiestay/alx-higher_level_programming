@@ -34,3 +34,15 @@
 >>> this.print_sorted()
 Traceback (most recent call last):
 TypeError: '<' not supported between instances of 'int' and 'str'
+>>> del(this)
+>>> this = MyList()
+>>> this.append(3)
+>>> this.append(100)
+>>> this.append(2)
+>>> this.print_sorted()
+[2, 3, 100]
+
+>>> thisit = MyList()
+>>> thisit.append(-1)
+>>> thisit.print_sorted()
+[-1]
