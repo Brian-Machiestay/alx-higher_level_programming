@@ -17,8 +17,8 @@ def append_after(filename="", search_string="", new_string=""):
                 if i[size - len(search_string): size] == search_string:
                     lines.insert(count + 1, new_string)
                     count = count + 1
+                    break
                 size = size + 1
-            size = 4
             count = count + 1
     lines = "".join(lines)
     with open(filename, "w", encoding="UTF-8") as f:
