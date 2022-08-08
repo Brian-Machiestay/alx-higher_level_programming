@@ -16,7 +16,6 @@ def append_after(filename="", search_string="", new_string=""):
             while size < len(i):
                 if i[size - len(search_string): size] == search_string:
                     lines.insert(count + 1, new_string)
-                    print("we found him on line {}".format(count))
                     count = count + 1
                 size = size + 1
             size = 4
