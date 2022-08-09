@@ -38,8 +38,7 @@ class Square(Rectangle):
                     count += 1
                     continue
                 if count == 1:
-                    self.width = i
-                    self.height = i
+                    self.size = i
                     count += 1
                     continue
                 if count == 2:
@@ -54,8 +53,7 @@ class Square(Rectangle):
             if 'id' in kwargs:
                 self.id = kwargs['id']
             if 'size' in kwargs:
-                self.heights = kwargs['size']
-                self.width = kwargs['size']
+                self.size = kwargs['size']
             if 'x' in kwargs:
                 self.x = kwargs['x']
             if 'y' in kwargs:
