@@ -17,6 +17,17 @@ class Square(Rectangle):
             format("Square", self.id, self.x, self.y, self.width)
         return string
 
+    @property
+    def size(self):
+        """returns the size"""
+        return self.height
+
+    @size.setter
+    def size(self, size):
+        """sets the size"""
+        self.width = size
+        self.height = size
+
     def update(self, *args, **kwargs):
         """this updates the attributes of this square"""
         count = 0
