@@ -34,3 +34,10 @@ class Base:
                 for i in list_objs:
                     thislist.append(i.to_dictionary())
             f.write(Base.to_json_string(thislist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """converts json string to py object"""
+        if json_string is None or "":
+            return []
+        return json.loads(json_string)
