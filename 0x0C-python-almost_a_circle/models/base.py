@@ -47,7 +47,7 @@ class Base:
         """returns an instance"""
         inst = ""
         if cls.__name__ == "Rectangle":
-            inst = models.rectangle.Rectangle(1, 1, 1, 1, 4)
+            inst = models.rectangle.Rectangle(1, 1)
         else:
             inst = models.square.Square(1)
         inst.update(**dictionary)
