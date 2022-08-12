@@ -2,7 +2,7 @@
 """this module creates a square"""
 
 
-from models.rectangle import Rectangle
+from models import Rectangle
 
 
 class Square(Rectangle):

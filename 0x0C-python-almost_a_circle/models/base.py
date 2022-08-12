@@ -2,6 +2,7 @@
 """this is the base class"""
 
 
+import models
 import json
 
 
@@ -41,3 +42,14 @@ class Base:
         if json_string is None or "":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance"""
+        inst = ""
+        if cls.__name__ == "Rectangle":
+            inst = models.rectangle.Rectangle(1, 1, 1, 1, 4)
+        else:
+            inst = models.square.Square(1)
+        inst.update(**dictionary)
+        return inst
