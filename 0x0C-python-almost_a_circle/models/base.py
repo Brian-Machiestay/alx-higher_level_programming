@@ -3,6 +3,7 @@
 
 import models
 import json
+import os
 
 
 class Base:
@@ -52,3 +53,20 @@ class Base:
             inst = models.square.Square(1)
         inst.update(**dictionary)
         return inst
+
+    @classmethod
+    def load_from_file(cls):
+        """load from from file"""
+        f = "{}.json".format(cls.__name__)
+        if not os.path.exists(f):
+            return []
+        string = ""
+        with open(f, "r", encoding="UTF-8") as f:
+            string = Base.from_json_string(f.read())
+        listinst = []
+        for i in string:
+            if cls.__name__ == "Rectangle":
+                listinst.append(models.rectangle.Rectangle.create(**i))
+            else:
+                listinst.append(models.square.Square.create(**i))
+        return listinst
