@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """this is the base class"""
 
-
 import models
 import json
 
