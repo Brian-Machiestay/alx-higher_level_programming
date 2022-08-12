@@ -30,6 +30,7 @@ class Base:
         """save json repr of listobjs to a file"""
         with open("{}.json".format(cls.__name__), "w", encoding="UTF-8") as f:
             thislist = []
-            for i in list_objs:
-                thislist.append(i.to_dictionary())
+            if list_objs is not None:
+                for i in list_objs:
+                    thislist.append(i.to_dictionary())
             f.write(Base.to_json_string(thislist))
