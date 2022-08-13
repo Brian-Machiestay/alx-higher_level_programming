@@ -70,3 +70,42 @@ class Base:
             else:
                 listinst.append(models.square.Square.create(**i))
         return listinst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to a csv file"""
+        with open("{}.csv".format(cls.__name__), "w", encoding="UTF-8") as f:
+            if list_objs is not None:
+                f.mode = "a"
+                for i in list_objs:
+                    if cls.__name__ == "Rectangle":
+                        f.write("{},{},{},{},{}\n".format(i.id, i.width,
+                                                          i.height, i.x, i.y))
+                    else:
+                        f.write("{},{},{},{}\n".format(i.id, i.size,
+                                                       i.x, i.y))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from csv file"""
+        f = "{}.csv".format(cls.__name__)
+        if not os.path.exists(f):
+            return []
+        thislist = []
+        with open(f, "r", encoding="UTF-8") as f:
+            for line in f:
+                data = line.split(",")
+                if cls.__name__ == "Rectangle":
+                    thislist.append(models.rectangle.
+                                    Rectangle.create(**{'id': int(data[0]),
+                                                        'width': int(data[1]),
+                                                        'height': int(data[2]),
+                                                        'x': int(data[3]),
+                                                        'y': int(data[4])}))
+                else:
+                    thislist.append(models.square.Square
+                                    .create(**{'id': int(data[0]),
+                                               'size': int(data[1]),
+                                               'x': int(data[2]),
+                                               'y': int(data[3])}))
+        return thislist
