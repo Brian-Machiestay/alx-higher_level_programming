@@ -4,6 +4,7 @@ const superSquare = require('./5-square.js');
 module.exports = class Square extends superSquare {
   charPrint (c) {
     if (!c) this.print();
+    else if (c !== 'C') this.print();
     else {
       let square = '';
       for (let i = 0; i < this.height; i++) {
