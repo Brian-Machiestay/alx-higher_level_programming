@@ -17,7 +17,7 @@ fs.readFile(argv[3].toString(), 'utf8', (err, data) => {
   if (err) {
     console.log(err);
   }
-  fs.appendFile(argv[4].toString(), data + '\n', (err, data) => {
+  fs.appendFile(argv[4].toString(), data, (err, data) => {
     if (err) {
       console.log(err);
     }
