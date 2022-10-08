@@ -21,7 +21,7 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
     rows = cur.fetchall()
     for row in rows:
         print("{}".format(row))
