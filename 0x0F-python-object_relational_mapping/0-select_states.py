@@ -19,7 +19,7 @@ if __name__ == "__main__":
     )
 
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states ORDER BY states.id")
     rows = cur.fetchall()
     for row in rows:
-        print("{}".format(row.name))
+        print("{}".format(row))
