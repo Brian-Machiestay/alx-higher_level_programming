@@ -12,7 +12,8 @@ if __name__ == "__main__":
     usr = argv[1]
     arg = argv[4]
 
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id"
+    query = "SELECT * FROM states WHERE name LIKE BINARY" + \
+        "'{}' ORDER BY states.id"
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
