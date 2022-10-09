@@ -15,7 +15,7 @@ if __name__ == "__main__":
                            .format(usr, pass_wd, dbName), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like('%a%'))
+    states = session.query(State).filter(State.name.ilike('%a%'))
     for state in states:
         session.delete(state)
 
