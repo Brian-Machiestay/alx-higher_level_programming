@@ -1,3 +1,4 @@
 #!/bin/bash
 # returns the body of a status 200 response
-curl -G "$1" 
+if [ $(curl -s -I "$1" | grep "HTTP" | grep -o -e "[0-9][0-9][0-9]") -eq 200 ]; then curl -G "$1"; fi
+
