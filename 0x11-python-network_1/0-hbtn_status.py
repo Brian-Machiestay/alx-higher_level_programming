@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """use the urllib module to fetch a webpage"""
 import urllib.request as req
-import json
 
 
 fetched = req.Request('https://alx-intranet.hbtn.io/status')
