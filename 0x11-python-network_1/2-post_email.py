@@ -5,7 +5,7 @@ import urllib.request
 import urllib.parse
 
 if __name__ == "__main__":
-    data = {"email" : sys.argv[2]}
+    data = {"email": sys.argv[2]}
     data = urllib.parse.urlencode(data)
     data = data.encode('ascii')
     res = urllib.request.Request(sys.argv[1], data)
