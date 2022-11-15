@@ -10,5 +10,5 @@ request(starApi, function (error, response, body) {
   for (const obj of JSON.parse(body).results) {
     if (obj.characters.includes(character)) count++;
   }
-  console.log(count);
+  if (count !== 0) console.log(count);
 });
